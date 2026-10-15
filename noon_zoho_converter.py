@@ -27,7 +27,7 @@ INVOICE_COLUMNS = [
     "Quantity", "Item Price", "VAT Treatment", "Accounts Receivable",
     "Is Inclusive Tax", "Template Name", "Currency Code", "Exchange Rate",
     "Account", "Item Tax", "Item Tax %", "Item Tax Type", "Item Type",
-    "Noon Order Nr", "Reference Nr", "Customer Name", "Status",
+    "Noon Order Nr", "Reference Nr", "Customer Name","Location Name", "Status",
 ]
 
 XLSX_MIME = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
@@ -119,7 +119,7 @@ def build_invoice_rows(data: pd.DataFrame) -> pd.DataFrame:
         "Template Name": "Standard Template",
         "Currency Code": "AED",
         "Exchange Rate": 1,
-        "Account": "Net Proceeds",
+        "Account": "Sales",
         "Item Tax": "Standard Rate",
         "Item Tax %": 5,
         "Item Tax Type": "ItemAmount",
