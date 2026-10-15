@@ -27,7 +27,7 @@ INVOICE_COLUMNS = [
     "Quantity", "Item Price", "VAT Treatment", "Accounts Receivable",
     "Is Inclusive Tax", "Template Name", "Currency Code", "Exchange Rate",
     "Account", "Item Tax", "Item Tax %", "Item Tax Type", "Item Type",
-    "Noon Order Nr", "Reference Nr", "Customer Name","Location Name", "Status",
+    "Noon Order Nr", "Reference Nr", "Customer Name","Location Name","Line Item Location Name" ,"Status",
 ]
 
 XLSX_MIME = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
@@ -127,7 +127,8 @@ def build_invoice_rows(data: pd.DataFrame) -> pd.DataFrame:
         "Noon Order Nr": data["Order Nr"].astype(str),
         "Reference Nr": data["Reference Nr"].astype(str),
         "Customer Name": "Noon Receivables",
-        "Location Name": "Noon Inventory",
+        "Location Name": "AlphaWolf Inventory (Main)",
+        "Line Item Location Name": "Noon Inventory",
         "Status": "Sent"
     })
     return result[INVOICE_COLUMNS]
