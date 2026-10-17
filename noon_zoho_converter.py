@@ -23,7 +23,7 @@ REQUIRED_COLUMNS = {
 }
 
 INVOICE_COLUMNS = [
-    "Invoice Date", "Invoice Number", "PurchaseOrder", "item name", "SKU",
+    "Invoice Date", "Invoice Number", "PurchaseOrder", "item name", "SKU","N SKU",
     "Quantity", "Item Price", "VAT Treatment", "Accounts Receivable",
     "Is Inclusive Tax", "Template Name", "Currency Code", "Exchange Rate",
     "Account", "Item Tax", "Item Tax %", "Item Tax Type", "Item Type",
@@ -110,7 +110,8 @@ def build_invoice_rows(data: pd.DataFrame) -> pd.DataFrame:
         "Invoice Number": data["Item Nr"].astype(str),
         "PurchaseOrder": data["Item Nr"].astype(str),
         "item name": data["Title"],
-        "SKU": data["SKUs"].astype(str),
+        "SKU": data["Partner SKUs"].astype(str),
+        "N SKU": data["SKUs"].astype(str),
         "Quantity": 1,
         "Item Price": data["Net Proceeds"],
         "VAT Treatment": "vat_not_registered",
