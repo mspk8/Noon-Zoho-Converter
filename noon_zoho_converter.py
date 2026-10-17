@@ -23,7 +23,7 @@ REQUIRED_COLUMNS = {
 }
 
 INVOICE_COLUMNS = [
-    "Invoice Date", "Invoice Number", "PurchaseOrder", "item name", "SKU","N SKU",
+    "Invoice Date", "Invoice Number", "PurchaseOrder", "item name", "SKU",
     "Quantity", "Item Price", "VAT Treatment", "Accounts Receivable",
     "Is Inclusive Tax", "Template Name", "Currency Code", "Exchange Rate",
     "Account", "Item Tax", "Item Tax %", "Item Tax Type", "Item Type",
